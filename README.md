@@ -1,38 +1,90 @@
-# CI/CD Tools and Practices Final Project Template
+# CI/CD with Tekton and OpenShift
 
-This repository contains the template to be used for the Final Project for the Coursera course **CI/CD Tools and Practices**.
+This repository contains the implementation of a CI/CD pipeline project that integrates **GitHub Actions**, **Tekton**, and **OpenShift** to demonstrate modern DevOps practices.
+
+---
+
+## Objectives
+
+* **GitHub Actions CI Pipeline**
+
+  * Create a workflow with steps for linting and unit testing.
+
+* **Tekton Tasks**
+
+  * Define tasks for linting, unit testing, and building a container image.
+
+* **OpenShift CI Pipeline**
+
+  * Create an OpenShift pipeline that reuses the Tekton tasks.
+
+* **Deployment Step**
+
+  * Extend the OpenShift pipeline to deploy the application to an OpenShift cluster.
+
+---
 
 ## Usage
 
-This repository is to be used as a template to create your own repository in your own GitHub account. No need to Fork it as it has been set up as a Template. This will avoid confusion when making Pull Requests in the future.
+This repository is designed as a standalone project.
+To get started, clone the repo into your own GitHub account:
 
-From the GitHub **Code** page, press the green **Use this template** button to create your own repository from this template.
+```bash
+git clone https://github.com/<your-username>/CI-CD_with_Tekton.git
+```
 
-Name your repo: `ci-cd-final-project`.
+---
 
 ## Setup
 
-After entering the lab environment you will need to run the `setup.sh` script in the `./bin` folder to install the prerequisite software.
+Inside your lab or local environment, install prerequisites by running:
 
 ```bash
 bash bin/setup.sh
 ```
 
-Then you must exit the shell and start a new one for the Python virtual environment to be activated.
+After installation, restart the shell to activate the Python virtual environment:
 
 ```bash
 exit
 ```
 
+---
+
 ## Tasks
 
+### 1. GitHub Actions Pipeline
+
+* Configure a workflow under `.github/workflows/`
+* Jobs include:
+
+  * **Linting** (code quality checks)
+  * **Unit Testing** (validating application logic)
+
+### 2. Tekton Tasks
+
+* Create Tekton `Task` definitions for:
+
+  * Linting
+  * Unit Testing
+  * Image Build
+
+### 3. OpenShift Pipeline
+
+* Define an OpenShift pipeline that **reuses Tekton tasks**.
+
+### 4. Deployment
+
+* Add a deployment step to the OpenShift pipeline to roll out the application to the lab OpenShift cluster.
+
+---
 
 ## License
 
-Licensed under the Apache License. See [LICENSE](/LICENSE)
+This project is licensed under the [Apache License](LICENSE).
+
+---
 
 ## Author
 
-Skills Network
-
-## <h3 align="center"> © IBM Corporation 2023. All rights reserved. <h3/>
+Created and maintained by **Abdullah Siraj**
